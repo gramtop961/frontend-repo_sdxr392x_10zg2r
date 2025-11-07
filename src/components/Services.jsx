@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
-import { Paintbrush, Hammer, Plug, Ruler, Building2, BedDouble, LampDesk, Workflow } from 'lucide-react';
+import { Paintbrush, Hammer, Plug, Ruler, Building2, BedDouble, LampDesk, Layers } from 'lucide-react';
 
 const services = [
   { title: 'Interior Designing', icon: Ruler, desc: 'Concept to execution with bespoke materials and finish.' },
   { title: 'Modular Kitchen', icon: LampDesk, desc: 'Premium modular systems crafted to millimeter precision.' },
   { title: 'Civil Work', icon: Building2, desc: 'Structural modifications, flooring, and turnkey execution.' },
-  { title: 'False Ceiling', icon: Workflow, desc: 'Layered ceilings with profile lighting and acoustic comfort.' },
+  { title: 'False Ceiling', icon: Layers, desc: 'Layered ceilings with profile lighting and acoustic comfort.' },
   { title: 'Electrical Work', icon: Plug, desc: 'Smart lighting, concealed wiring, and automation-ready.' },
   { title: 'Painting', icon: Paintbrush, desc: 'Luxury emulsion finishes with dust-free process.' },
   { title: 'Vastu Consultation', icon: BedDouble, desc: 'Balanced layouts aligned with vastu sciences.' },
@@ -32,7 +32,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.05 }}
-              className="group rounded-2xl border border-black/10 bg-[#f8f8f8] p-6 shadow-sm transition hover:shadow-md dark:border-white/10 dark:bg-white/5"
+              className="group rounded-2xl border border-black/10 bg-[#f8f8f8] p-6 shadow-sm transition hover:shadow-md dark:border-white/10 dark:bg:white/5 dark:bg-white/5"
             >
               <div className="mb-4 inline-flex rounded-xl bg-[#e3dccd] p-3 text-[#1e1e1e] dark:bg-white/10 dark:text-white">
                 <s.icon className="h-6 w-6" />

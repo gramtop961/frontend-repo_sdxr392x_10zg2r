@@ -1,7 +1,16 @@
 import { motion } from 'framer-motion';
 
 const categories = ['All', '1BHK', '2BHK', '3BHK', 'Commercial'];
-const images = Array.from({ length: 8 }).map((_, i) => `https://images.unsplash.com/photo-15${60 + i}2010-000000?auto=format&fit=crop&w=1200&q=60`);
+const gallery = [
+  'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1400&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1400&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1400&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1400&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1502005229762-cf1b2da7c592?q=80&w=1400&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1493666438817-866a91353ca9?q=80&w=1400&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1400&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1523217582562-09d0def993a6?q=80&w=1400&auto=format&fit=crop',
+];
 
 export default function Portfolio() {
   return (
@@ -20,8 +29,8 @@ export default function Portfolio() {
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {images.map((src, idx) => (
-            <motion.div
+          {gallery.map((src, idx) => (
+            <motion.figure
               key={src}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -29,10 +38,14 @@ export default function Portfolio() {
               transition={{ duration: 0.4, delay: idx * 0.03 }}
               className="group relative overflow-hidden rounded-2xl"
             >
-              <img src={`https://images.unsplash.com/photo-150${idx}635784587-7a84b6b8`}
-                   alt="Interior" className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-            </motion.div>
+              <img
+                src={src}
+                alt="Interior project"
+                className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+              <figcaption className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            </motion.figure>
           ))}
         </div>
       </div>
