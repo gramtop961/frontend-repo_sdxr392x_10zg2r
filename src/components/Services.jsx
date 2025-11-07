@@ -32,7 +32,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.05 }}
-              className="group rounded-2xl border border-black/10 bg-[#f8f8f8] p-6 shadow-sm transition hover:shadow-md dark:border-white/10 dark:bg:white/5 dark:bg-white/5"
+              className="group rounded-2xl border border-black/10 bg-[#f8f8f8] p-6 shadow-sm transition hover:shadow-md dark:border-white/10 dark:bg-white/5"
             >
               <div className="mb-4 inline-flex rounded-xl bg-[#e3dccd] p-3 text-[#1e1e1e] dark:bg-white/10 dark:text-white">
                 <s.icon className="h-6 w-6" />
